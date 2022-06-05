@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.nio.file.StandardCopyOption;
 import java.util.Scanner;
 import java.util.ArrayList;
@@ -147,7 +148,7 @@ public class ServerViewer {
 		System.out.println(" Done!");
 		
 		System.out.println();
-		String downloadFolder = System.getProperty("user.home") + "\\Downloads";
+		String downloadFolder = Paths.get(System.getProperty("user.home"), "downloads").toString();
 		System.out.println("Download folder: " + downloadFolder);
 		File targetFile = new File(downloadFolder + downloadUrl.substring(downloadUrl.lastIndexOf('/'), downloadUrl.length()));
 		if (targetFile.isDirectory() || targetFile.isFile()) {
