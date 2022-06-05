@@ -15,9 +15,9 @@ import org.json.simple.parser.JSONParser;
 
 public class ServerViewer {
 
-	private JSONParser parser;
-	private String repoListUrl;
-	private String repoBranch;
+	private final JSONParser parser;
+	private final String repoListUrl;
+	private final String repoBranch;
 	private String repoBranchUrl;
 	private JSONArray packages;
 	private Scanner input;
